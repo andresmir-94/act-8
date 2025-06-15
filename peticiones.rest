@@ -1,0 +1,31 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/autores
+
+###
+
+GET {{host}}/api/posts
+
+###
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Stephen King",
+  "email": "stepking@example.com",
+  "imagen": "https://example.com/stephenKing.jpg"
+}
+
+###
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Divergente",
+  "descripcion": "Divergent es una trilogía para jóvenes-adultos de aventura y ciencia ficción, escrita por Veronica Roth. La trilogía se compone de Divergente, Insurgente y Leal.​ Ha sido comparada con libros para adultos jóvenes similares, tales como Los juegos del hambre, por su temática y el público al que se dirige.",
+  "categoria": "Novela",
+  "autor_id": 2
+}
+
+###
+GET {{host}}/api/posts/2/autor
